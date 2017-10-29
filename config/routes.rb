@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  scope :admin do
+    devise_for :admins
+  end
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  
   resources :home, only: %i[index]
   root to: 'web/home#index'
 
