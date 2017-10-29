@@ -1,3 +1,5 @@
 class Web::HomeController < Web::BaseController
-  def index; end
+  def index
+    redirect_to rails_admin_path
+  end
 end
