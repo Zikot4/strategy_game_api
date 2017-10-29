@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   end
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  
+
   resources :home, only: %i[index]
   root to: 'web/home#index'
 
@@ -12,4 +12,10 @@ Rails.application.routes.draw do
                                       controllers: {
                                         registrations: 'users/registrations'
                                       }
+
+  namespace :api do
+    namespace :v1 do
+      resources :lobbies, only: %i[index create]
+    end
+  end
 end

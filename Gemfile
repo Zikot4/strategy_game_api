@@ -53,4 +53,5 @@ gem 'devise'
 gem 'devise_token_auth'
 gem 'omniauth'
 
+gem 'active_model_serializers', '~> 0.10.0'
 gem 'rails_admin', '~> 1.2'

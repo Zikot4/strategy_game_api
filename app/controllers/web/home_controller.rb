@@ -1,5 +1,3 @@
-module Web
-  class HomeController < ApplicationController
-    def index; end
-  end
+class Web::HomeController < Web::BaseController
+  def index; end
 end
